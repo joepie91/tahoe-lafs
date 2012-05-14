@@ -10,17 +10,18 @@
 <div class="section" id="this-client">
   <h2>This Client</h2>
 
-  <p>
-    <a href="status/">Recent Uploads and Downloads</a>,
-    <a href="statistics">Operational Statistics</a>
-  </p>
+  <ul class="nav">
+    <li><a href="status/">Recent Uploads and Downloads</a></li>
+    <li><a href="statistics">Operational Statistics</a></li>
+    <li class="clear"></li>
+  </ul>
 
-  <table class="node-info table-headings-left">
-    <tr><th>My nickname:</th> <td class="nickname mine" n:render="string" n:data="my_nickname" /></tr>
-    <tr><th>My nodeid:</th> <td class="nodeid mine data-chars" n:render="string" n:data="my_nodeid" /></tr>
-    <tr><th>My versions:</th> <td n:render="string" n:data="version" /></tr>
-    <tr><th>Tahoe-LAFS code imported from:</th> <td n:render="string" n:data="import_path" /></tr>
-    <tr><th>Services running:</th> <td n:render="services" /></tr>
+  <table class="node-info table-headings-top-single">
+    <tr><th>Nickname:</th> </tr><tr> <td class="nickname mine" n:render="string" n:data="my_nickname" /></tr>
+    <tr><th>Node ID:</th> </tr><tr> <td class="nodeid mine data-chars" n:render="string" n:data="my_nodeid" /></tr>
+    <tr><th>Versions:</th> </tr><tr> <td n:render="string" n:data="version" /></tr>
+    <tr><th>Tahoe-LAFS code imported from:</th> </tr><tr> <td n:render="string" n:data="import_path" /></tr>
+    <tr><th>Services:</th> </tr><tr> <td n:render="services" /></tr>
   </table>
 </div>
 
@@ -39,13 +40,13 @@
   <h2>Status of the Storage Grid</h2>
 
   <div>
-    <n:attr name="class">connected-<n:invisible n:render="string" n:data="connected_to_introducer" /></n:attr>
+    <n:attr name="class">external-status connected-<n:invisible n:render="string" n:data="connected_to_introducer" /></n:attr>
     <div>Introducer: <span class="data-chars" n:render="string" n:data="introducer_furl" /></div>
     <div>Connected to introducer?: <span n:render="string" n:data="connected_to_introducer" /></div>
   </div>
 
   <div>
-    <n:attr name="class">connected-<n:invisible n:render="string" n:data="connected_to_helper" /></n:attr>
+    <n:attr name="class">external-status connected-<n:invisible n:render="string" n:data="connected_to_helper" /></n:attr>
     <div>Helper: <span n:render="string" n:data="helper_furl" /></div>
     <div>Connected to helper?: <span n:render="string" n:data="connected_to_helper" /></div>
   </div>

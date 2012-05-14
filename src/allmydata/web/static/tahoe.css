@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Oxygen);
 
 pre.overflow {
                background: #f7f7f7;
@@ -12,30 +13,49 @@ pre.overflow {
 /* colors borrowed from the Allmydata logo */
 
 /* general style */
+body {
+  font-family: 'Oxygen', sans-serif;
+  background-color: #FDFDFD;
+}
+
 h1 {
   text-align: center;
 }
 table { 
   margin: 1em auto;
-  border: .2em solid #3289b4; 
-  border-spacing: 1px;
-}
-th { 
-  color: white;
-  background-color: #58a1c3;
-}
-td {
-    padding: .3em .3em;
+  border: .2em solid #282828; 
+  border-spacing: 0px;
+  border-collapse: collapse;
 }
 
-th {
-    padding: .3em .3em;
+th { 
+  color: white;
+  background-color: #343434;
+  border: 1px solid #4C4C4C;
+  padding: .3em .3em;
+}
+td {
+    padding: .3em .7em;
+    border: 1px solid #CACACA;
+    background-color: #F8F8F8;
+}
+
+h2 {
+  margin-bottom: 3px;
+}
+
+p {
+  margin: 6px 0px;
 }
 
 .table-headings-top th {
     text-align: center;
-    
 }
+
+.table-headings-top-single th {
+    text-align: left;
+}
+
 .table-headings-left th {
     text-align: right;
     vertical-align: top;
@@ -68,9 +88,48 @@ table td.empty-marker {
   vertical-align: center;
 }
 
+.external-status {
+  margin-top: 6px;
+  padding: 7px;
+}
+
+/* clearfix */
+.clear {
+  clear: both;
+}
+
+/* nav bars */
+ul.nav {
+  display: block;
+  background-color: #4E4E4E;
+  padding: 0px;
+  margin: 0px;
+}
+
+ul.nav li {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+ul.nav a {
+  color: white;
+  font-weight: bold;
+  padding: 12px 14px;
+  text-decoration: none;
+  display: block;
+  float: left;
+  border-right: 1px solid #424242;
+}
+
+ul.nav a:hover {
+  background-color: #424242;
+}
+
 /* styles for server listings in tables (nickname above nodeid) */
 th.nickname-and-peerid {
   text-align: left;
+  padding: .3em .7em;
 }
 .nickname {
   font: inherit;
@@ -84,29 +143,33 @@ th.nickname-and-peerid {
 
 /* section-specific styles - turn this client info into a sidebar */
 #this-client {
-  font-size: 60%;
-  border: .2em solid #3289b4;
+  font-size: 80%;
+  border: .2em solid #343434;
   float: right;
   width: 40%;
-  margin: 0 0 .5em .5em;
-  padding: 3px;
+  margin: 0 0 1em 1em;
+  padding: 0px;
 }
 #this-client .nodeid { font-size: inherit; }
 #this-client h2 {
   text-align: center;
-  background: #3289b4;
+  background: #343434;
   color: white;
-  margin: -2px -2px 0 -2px; /* matches padding */
+  margin: 0px; /* matches padding */
   padding: .3em;
 }
 #this-client table { 
   font-size: inherit;
-  margin: 0 -3px -3px -3px; /* matches padding */
+  margin: 0px; /* matches padding */
 }
 #this-client td > ul {
   list-style-type: outside;
   margin: 0 0 0 2.3em;
   padding-left: 0;
+}
+
+#this-client td, #this-client th {
+  padding: 7px;
 }
 
 
