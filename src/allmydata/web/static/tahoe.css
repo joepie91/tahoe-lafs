@@ -181,12 +181,12 @@ th.nickname-and-peerid {
 
 body.tahoe-directory-page {
   color: black;
-  background: #c0d9e6;
+  background: #F0F0F0;
   margin: 1em 0; /* zero margin so the table can be flush */
 }
 table.tahoe-directory {
   color: black;
-  background: white;
+  background: #F8F8F8;
   width: 100%;
   /*border-left-color: #D7E0E5;
   border-right-color: #D7E0E5;*/
@@ -195,7 +195,7 @@ table.tahoe-directory {
 }
 .tahoe-directory-footer {
   color: black;
-  background: #c0d9e6;
+  background: #F0F0F0;
   margin: 0 1em; /* compensate for page 0 margin */
 }
 
